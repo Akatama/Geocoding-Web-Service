@@ -10,7 +10,6 @@ import math
 import re
 
 
-
 # Initialize the Flask application
 app = Flask(__name__)
 # Generate a random secret key for the session
@@ -269,8 +268,7 @@ def map(map_url):
     return render_template(map_url)
 
 
-
 # Check if this script is being run directly (and not imported as a module)
 if __name__ == "__main__":
     # Run the Flask web app with debug mode ON
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
